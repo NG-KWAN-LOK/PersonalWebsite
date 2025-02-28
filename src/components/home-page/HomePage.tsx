@@ -13,6 +13,7 @@ import Contact from "./Contact";
 
 export const HomePage = () => {
   document.title = "Kwan Lok NG Official";
+
   return (
     <div className={styles.container}>
       <Header />
