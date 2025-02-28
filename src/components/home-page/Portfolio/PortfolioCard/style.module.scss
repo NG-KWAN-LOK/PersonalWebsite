@@ -1,0 +1,87 @@
+@import "../../../../theme";
+.container {
+  width: 50%;
+  padding: 0 2.45rem 0 0;
+  margin: 0 0 2.45rem 0;
+  @media (max-width: 600px) {
+    width: calc(99.999999% * 0.51);
+    width: 100%;
+  }
+  @media (min-width: 760px) {
+    padding: 0 3.5rem 0 0;
+  }
+}
+.container_item_container {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 320px;
+    height: 162px;
+  }
+  &:hover {
+    .container_item_container_cover {
+      opacity: 1;
+      transition: 0.5s;
+    }
+    .container_item_container_img {
+      filter: grayscale(0%);
+      transition: 0.5s;
+    }
+  }
+}
+.container_item_container_img {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+.container_item_container_cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg-color-opacity);
+  z-index: 1;
+  top: 0;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 2.45rem;
+}
+.container_item_container_cover_top {
+  height: 90%;
+}
+.container_item_container_cover_top_title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0 0 7.7px 0;
+}
+.container_item_container_cover_top_subtitle {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+}
+.container_item_container_cover_botton {
+  display: flex;
+  justify-content: center;
+  font-size: 1.68rem;
+}
+.container_item_container_cover_botton_demoBtn {
+  font-weight: 600;
+  transition: 0.5s;
+  margin: 0 20px 0 0;
+  &:hover {
+    color: var(--second-title-color);
+    transition: 0.5s;
+  }
+}
+.container_item_container_cover_botton_GithubBtn {
+  font-weight: 600;
+  transition: 0.5s;
+  &:hover {
+    color: var(--second-title-color);
+    transition: 0.5s;
+  }
+}
