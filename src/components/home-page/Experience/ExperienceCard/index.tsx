@@ -7,6 +7,7 @@ interface ExperienceCardProps {
   position: string;
   location: string;
   info: string;
+  techStack?: string;
 }
 export const ExperienceCard = ({
   period,
@@ -15,6 +16,7 @@ export const ExperienceCard = ({
   position,
   location,
   info,
+  techStack,
 }: ExperienceCardProps) => {
   return (
     <div id={"Experience"} className={styles.container}>
@@ -32,6 +34,12 @@ export const ExperienceCard = ({
         <p className={styles.container_item_title_location}>{location}</p>
       </div>
       <div className={styles.container_info}>
+        {techStack && (
+          <div className={styles.container_info_techStack}>
+            <p className={styles.container_info_techStack_label}>Tech stack</p>
+            <p>{techStack}</p>
+          </div>
+        )}
         <p className={styles.container_info_text}>
           {info.split("\n").map((i, index) => {
             return <p key={index}>{i}</p>;

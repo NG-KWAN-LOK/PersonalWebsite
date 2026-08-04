@@ -23,12 +23,14 @@ export const Education = () => {
             <div className={styles.infoSection_container_timeLine}>
               <div className={styles.infoSection_container_timeLine_end}></div>
               <EducationCard
-                period='2017 - Present'
+                period='2017 - 2022'
                 title='National Taipei University of Technology'
                 website='https://csie.ntut.edu.tw/csie/Chinese/index.html/'
-                position='Bachelor of Computer Science and Information Engineering'
-                location='Taipei, ROC'
-                info=''
+                position="Bachelor's degree, Computer Science and Information Engineering"
+                location='Taipei, Taiwan (R.O.C.)'
+                info={
+                  "• Excellent Work of Final Year Project Competition (實務專題競賽佳作)\n• Took one year of sick leave during the programme"
+                }
               />
               <EducationCard
                 period='2011 - 2017'

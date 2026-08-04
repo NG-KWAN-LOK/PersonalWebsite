@@ -33,7 +33,7 @@ export const Home = () => {
               <hr className={styles.infoSection_container_footer_line} />
               <div className={styles.infoSection_container_footer_contact}>
                 <ContactCard title='Nationality' text='Hong Kong' />
-                <ContactCard title='Location' text='Taipei, ROC' />
+                <ContactCard title='Location' text='Taipei, Taiwan (R.O.C.)' />
                 <ContactCard
                   title='Instagram'
                   text='@djalok2004'

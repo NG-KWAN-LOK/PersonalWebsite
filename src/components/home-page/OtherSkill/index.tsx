@@ -20,11 +20,25 @@ export const OtherSkill = () => {
         </div>
         <div className={styles.infoSection}>
           <div className={styles.infoSection_container}>
-            <OtherSkillCard title={"Git"} subtitle={"I am a team worker."} />
             <OtherSkillCard
-              title={"Microsoft Office"}
-              subtitle={"Finish homework and presentation just use it."}
+              title={"Claude Code / Codex / Cursor"}
+              subtitle={
+                "I build my own skills and agents on top of them, for writing code, monitoring our systems and doing code review."
+              }
             />
+            <OtherSkillCard
+              title={"Google Cloud Platform"}
+              subtitle={
+                "Deploys on App Engine and Cloud Run, scheduled jobs on Cloud Scheduler, and Cloud Logging when something breaks."
+              }
+            />
+            <OtherSkillCard
+              title={"Google Analytics / Tag Manager"}
+              subtitle={
+                "Tagging events on the front end and reading them back in BigQuery, so we know how people actually use the product."
+              }
+            />
+            <OtherSkillCard title={"Git"} subtitle={"I am a team worker."} />
             <OtherSkillCard
               title={"Unity"}
               subtitle={"I used this to finish my cool final year project!"}

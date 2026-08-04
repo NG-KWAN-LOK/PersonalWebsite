@@ -20,7 +20,7 @@ export const Contact = () => {
         </div>
         <div className={styles.infoSection}>
           <div className={styles.infoSection_container}>
-            <ContactCard title='Location' text='Taipei, ROC' />
+            <ContactCard title='Location' text='Taipei, Taiwan (R.O.C.)' />
             <ContactCard
               title='LinkedIn'
               text='Kwan Lok NG'
@@ -36,7 +36,7 @@ export const Contact = () => {
           <div className={styles.infoSection_footer}>
             <div className={styles.infoSection_footer_EngName}>Sam</div>
             <div className={styles.infoSection_footer_ChiName}>
-              <span>KWAN LOK, NG 吳軍樂</span>
+              <span>KWAN LOK, NG&thinsp;吳軍樂</span>
             </div>
           </div>
         </div>

@@ -20,22 +20,17 @@ export const Skill = () => {
         </div>
         <div className={styles.infoSection}>
           <div className={styles.infoSection_container}>
+            <SkillCard persentage={80} title={"Next.js"} />
             <SkillCard persentage={80} title={"React"} />
-            <SkillCard persentage={80} title={"HTML"} />
-            <SkillCard persentage={80} title={"Material-UI"} />
-            <SkillCard persentage={80} title={"CSS/ SASS"} />
+            <SkillCard persentage={80} title={"Typescript/ Javascript"} />
+            <SkillCard persentage={80} title={"Storybook"} />
             <SkillCard
               persentage={80}
-              title={"Typescript/ Javascript/ JQuery"}
+              title={"Vitest/ React Testing Library"}
             />
-            <SkillCard persentage={70} title={"Redux Toolkit"} />
-            <SkillCard persentage={70} title={"React Query"} />
-            <SkillCard
-              persentage={60}
-              title={"Jest/ Testing Library/ Cypress"}
-            />
-            <SkillCard persentage={60} title={"SQL/ MySQL"} />
-            <SkillCard persentage={60} title={"Python"} />
+            <SkillCard persentage={60} title={"Cypress"} />
+            <SkillCard persentage={60} title={"SQL/ PostgreSQL/ BigQuery"} />
+            <SkillCard persentage={60} title={"Python/ FastAPI"} />
           </div>
         </div>
       </div>
