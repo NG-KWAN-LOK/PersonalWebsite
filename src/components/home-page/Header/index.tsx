@@ -3,7 +3,7 @@ import styles from "./style.module.scss";
 
 import NavBar from "./NavBar";
 const Header = () => {
-  const displayNavTimeoutRef = useRef<any>();
+  const displayNavTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [isNavBarDisplay, setIsNavBarDisplay] = useState(false);
   const [isHeaderDisplay, setIsHeaderDisplay] = useState(true);
   const navToggleOn = useCallback(() => {

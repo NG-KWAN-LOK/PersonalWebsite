@@ -9,7 +9,7 @@ interface SkillCardProps {
 }
 const SkillCard: React.FC<SkillCardProps> = ({ persentage, title }) => {
   const [completed, setCompleted] = useState(0);
-  const intersectionRef = React.useRef(null);
+  const intersectionRef = React.useRef<HTMLDivElement>(null!);
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: "0px",

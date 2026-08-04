@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route, useHistory, useLocation } from "react-router-dom";
+import React from "react";
 import styles from "./style.module.scss";
-import avatar from "../../image/IMG_3153.jpg";
 interface ContactCardProps {
   title: string;
   text: string;
