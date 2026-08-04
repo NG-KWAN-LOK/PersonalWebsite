@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 
-import ProtfolioCard from "./PortfolioCard";
+import { PortfolioCard } from "./PortfolioCard";
 import demo1 from "../../../image/1.png";
 import demo2 from "../../../image/2.png";
 import demo3 from "../../../image/3.png";
@@ -10,7 +10,7 @@ import demo7 from "../../../image/6.png";
 import demo4 from "../../../image/discord-logo.jpg";
 import demo8 from "../../../image/7.png";
 
-const Portfolio = () => {
+export const Portfolio = () => {
   return (
     <div id={"Portfolio"} className={styles.container}>
       <div className={styles.container_bg_secondHeader}></div>
@@ -28,7 +28,7 @@ const Portfolio = () => {
         </div>
         <div className={styles.infoSection}>
           <div className={styles.infoSection_container}>
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo5}
               websiteUrl={"https://messager.sawajiri-ng.net/"}
               githubUrl={"https://github.com/NG-KWAN-LOK/IS_P2P_Chat"}
@@ -37,7 +37,7 @@ const Portfolio = () => {
                 "Real Time Secured Messaging Web Application using React, Socket.io and cryptosystem."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo2}
               websiteUrl={"https://ds-shop-react.herokuapp.com/"}
               githubUrl={"https://github.com/NG-KWAN-LOK/DS_Eshop"}
@@ -45,7 +45,7 @@ const Portfolio = () => {
               subtitle={"A online shop demo using React for Front-end."}
             />
 
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo3}
               websiteUrl={"https://buddy-city-info.sawajiri-ng.net/"}
               githubUrl={"https://github.com/NG-KWAN-LOK/Buddy-City-React"}
@@ -54,7 +54,7 @@ const Portfolio = () => {
                 "A online visitors' guide website using React and i18n for multi language."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo8}
               websiteUrl={"https://kotoba-asobou-solver.sawajiri-ng.net/"}
               githubUrl={
@@ -65,7 +65,7 @@ const Portfolio = () => {
                 "A web app to solve the game Japanese Version of Wordle - Kotobade Asobou."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo7}
               websiteUrl={"https://youtu.be/09_jaIdTidA?t=7213"}
               githubUrl={"https://github.com/fantong11/VirtualCamera"}
@@ -74,7 +74,7 @@ const Portfolio = () => {
                 "A Virtual Camera with Virtual Avatar and Virtual Reality using Unity and ARKit."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo1}
               websiteUrl={
                 "https://ng-kwan-lok.github.io/OOPGame/demo/Tower_of_the_Sorcerer/game_sample.html"
@@ -85,7 +85,7 @@ const Portfolio = () => {
                 "A non-linear puzzle game disguised as an RPG using HTML5.\n If the screen turn white, please press 'F12'."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo4}
               websiteUrl={
                 "https://discord.com/api/oauth2/authorize?client_id=801768804148314113&permissions=3287040&scope=bot"
@@ -96,7 +96,7 @@ const Portfolio = () => {
                 "A full function discord music bot using Node.js. This app deploying on Heroku."
               }
             />
-            <ProtfolioCard
+            <PortfolioCard
               imageUrl={demo6}
               websiteUrl={"https://www.sawajiri-ng.net/"}
               githubUrl={"https://github.com/NG-KWAN-LOK/PersonalWebsite"}
@@ -111,5 +111,3 @@ const Portfolio = () => {
     </div>
   );
 };
-
-export default Portfolio;

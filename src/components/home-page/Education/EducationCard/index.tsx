@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
 interface EducationCardProps {
@@ -10,14 +8,14 @@ interface EducationCardProps {
   location: string;
   info: string;
 }
-const EducationCard: React.FC<EducationCardProps> = ({
+export const EducationCard = ({
   period,
   title,
   website,
   position,
   location,
   info,
-}) => {
+}: EducationCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.container_point}></div>
@@ -43,5 +41,3 @@ const EducationCard: React.FC<EducationCardProps> = ({
     </div>
   );
 };
-
-export default EducationCard;

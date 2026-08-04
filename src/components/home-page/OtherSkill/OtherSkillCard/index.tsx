@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
-interface SkillCardProps {
+export const OtherSkillCard = ({
+  title,
+  subtitle,
+}: {
   title: string;
   subtitle: string;
-}
-const SkillCard: React.FC<SkillCardProps> = ({ title, subtitle }) => {
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.container_item_title}>
@@ -16,5 +16,3 @@ const SkillCard: React.FC<SkillCardProps> = ({ title, subtitle }) => {
     </div>
   );
 };
-
-export default SkillCard;

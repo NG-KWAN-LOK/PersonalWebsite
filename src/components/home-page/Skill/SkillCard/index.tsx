@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
-import ProgressBar from "./ProgressBar";
-interface SkillCardProps {
+import { ProgressBar } from "./ProgressBar";
+export const SkillCard = ({
+  persentage,
+  title,
+}: {
   persentage: number;
   title: string;
-}
-const SkillCard: React.FC<SkillCardProps> = ({ persentage, title }) => {
+}) => {
   const [completed, setCompleted] = useState(0);
-  const intersectionRef = React.useRef<HTMLDivElement>(null!);
+  const intersectionRef = useRef<HTMLDivElement>(null!);
   const intersection = useIntersection(intersectionRef, {
     root: null,
     rootMargin: "0px",
@@ -33,5 +35,3 @@ const SkillCard: React.FC<SkillCardProps> = ({ persentage, title }) => {
     </div>
   );
 };
-
-export default SkillCard;

@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import OtherSkillCard from "./OtherSkillCard";
+import { OtherSkillCard } from "./OtherSkillCard";
 
-const OtherSkill = () => {
+export const OtherSkill = () => {
   return (
     <div className={styles.container}>
       <div className={styles.container_bg_secondHeader}></div>
@@ -47,5 +47,3 @@ const OtherSkill = () => {
     </div>
   );
 };
-
-export default OtherSkill;

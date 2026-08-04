@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import LanguagesCard from "./LanguagesCard";
+import { LanguagesCard } from "./LanguagesCard";
 
-const Languages = () => {
+export const Languages = () => {
   return (
     <div id={"Languages"} className={styles.container}>
       <div className={styles.container_bg_secondHeader}></div>
@@ -36,5 +36,3 @@ const Languages = () => {
     </div>
   );
 };
-
-export default Languages;

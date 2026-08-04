@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import ContactCard from "./ContactCard";
+import { ContactCard } from "./ContactCard";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <div id='Contact' className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -44,5 +44,3 @@ const Contact = () => {
     </div>
   );
 };
-
-export default Contact;

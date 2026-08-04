@@ -1,7 +1,7 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import { HomePage } from "./components/home-page/HomePage";
 
-function App() {
+export const App = () => {
   return (
     <Switch>
       {/* Add other pages here, e.g. <Route path='/other-page/foo'><Foo /></Route> */}
@@ -13,6 +13,4 @@ function App() {
       </Route>
     </Switch>
   );
-}
-
-export default App;
+};

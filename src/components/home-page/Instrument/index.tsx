@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import InstrumentCard from "./InstrumentCard";
+import { InstrumentCard } from "./InstrumentCard";
 
-const Instrument = () => {
+export const Instrument = () => {
   return (
     <div id={"Instrument"} className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -36,5 +36,3 @@ const Instrument = () => {
     </div>
   );
 };
-
-export default Instrument;

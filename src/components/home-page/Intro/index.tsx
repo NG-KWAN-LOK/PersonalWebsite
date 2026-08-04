@@ -1,6 +1,6 @@
 import styles from "./style.module.scss";
 
-const Intro = () => {
+export const Intro = () => {
   return (
     <div id={"Intro"} className={styles.container}>
       <div className={styles.container_bg_secondHeader}></div>
@@ -66,5 +66,3 @@ const Intro = () => {
     </div>
   );
 };
-
-export default Intro;

@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import EducationCard from "./EducationCard";
+import { EducationCard } from "./EducationCard";
 
-const Education = () => {
+export const Education = () => {
   return (
     <div id={"Education"} className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -47,5 +47,3 @@ const Education = () => {
     </div>
   );
 };
-
-export default Education;

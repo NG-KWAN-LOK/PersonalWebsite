@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
 interface ExperienceCardProps {
@@ -10,14 +8,14 @@ interface ExperienceCardProps {
   location: string;
   info: string;
 }
-const ExperienceCard: React.FC<ExperienceCardProps> = ({
+export const ExperienceCard = ({
   period,
   title,
   website,
   position,
   location,
   info,
-}) => {
+}: ExperienceCardProps) => {
   return (
     <div id={"Experience"} className={styles.container}>
       <div className={styles.container_point}></div>
@@ -43,5 +41,3 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
     </div>
   );
 };
-
-export default ExperienceCard;

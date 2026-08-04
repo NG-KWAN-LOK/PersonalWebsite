@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import ExperienceCard from "./ExperienceCard";
+import { ExperienceCard } from "./ExperienceCard";
 
-const Experience = () => {
+export const Experience = () => {
   return (
     <div id={"Experience"} className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -38,5 +38,3 @@ const Experience = () => {
     </div>
   );
 };
-
-export default Experience;

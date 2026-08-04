@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
-interface LanguagesCardProps {
+export const LanguagesCard = ({
+  title,
+  subtitle,
+}: {
   title: string;
   subtitle: string;
-}
-const LanguagesCard: React.FC<LanguagesCardProps> = ({ title, subtitle }) => {
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.container_item_title}>
@@ -20,5 +20,3 @@ const LanguagesCard: React.FC<LanguagesCardProps> = ({ title, subtitle }) => {
     </div>
   );
 };
-
-export default LanguagesCard;

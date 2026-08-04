@@ -1,10 +1,11 @@
-import React, { useState, useCallback, useEffect } from "react";
 import styles from "./style.module.scss";
-interface NavBarProps {
+export const NavBar = ({
+  setMobileNavOn,
+  setMobileNavOff,
+}: {
   setMobileNavOn: () => void;
   setMobileNavOff: () => void;
-}
-const NavBar: React.FC<NavBarProps> = ({ setMobileNavOn, setMobileNavOff }) => {
+}) => {
   //console.log(setMobileNavOn);
   return (
     <nav className={styles.navContainer}>
@@ -53,5 +54,3 @@ const NavBar: React.FC<NavBarProps> = ({ setMobileNavOn, setMobileNavOff }) => {
     </nav>
   );
 };
-
-export default NavBar;

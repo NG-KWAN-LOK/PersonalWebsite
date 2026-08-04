@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { useIntersection } from "react-use";
 import styles from "./style.module.scss";
 
 interface PortfolioCardProps {
@@ -9,13 +7,13 @@ interface PortfolioCardProps {
   title: string;
   subtitle: string;
 }
-const PortfolioCard: React.FC<PortfolioCardProps> = ({
+export const PortfolioCard = ({
   imageUrl,
   websiteUrl,
   githubUrl,
   title,
   subtitle,
-}) => {
+}: PortfolioCardProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.container_item_container}>
@@ -52,5 +50,3 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
     </div>
   );
 };
-
-export default PortfolioCard;

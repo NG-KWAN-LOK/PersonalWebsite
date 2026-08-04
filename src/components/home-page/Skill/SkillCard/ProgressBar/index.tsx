@@ -1,9 +1,5 @@
-import React, { useState, useCallback } from "react";
 import styles from "./style.module.scss";
-interface ProgressBarProps {
-  persentage: number;
-}
-const SkillCard: React.FC<ProgressBarProps> = ({ persentage }) => {
+export const ProgressBar = ({ persentage }: { persentage: number }) => {
   const fillerStyles = {
     width: `${persentage}%`,
   };
@@ -16,5 +12,3 @@ const SkillCard: React.FC<ProgressBarProps> = ({ persentage }) => {
     </div>
   );
 };
-
-export default SkillCard;

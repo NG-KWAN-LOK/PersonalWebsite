@@ -1,8 +1,8 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import styles from "./style.module.scss";
 
-import NavBar from "./NavBar";
-const Header = () => {
+import { NavBar } from "./NavBar";
+export const Header = () => {
   const displayNavTimeoutRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
   const [isNavBarDisplay, setIsNavBarDisplay] = useState(false);
   const [isHeaderDisplay, setIsHeaderDisplay] = useState(true);
@@ -67,5 +67,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

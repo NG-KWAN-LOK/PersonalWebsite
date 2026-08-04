@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 import avatar from "../../../image/icon.jpg";
 
-import ContactCard from "./ContactCard";
-const Home = () => {
+import { ContactCard } from "./ContactCard";
+export const Home = () => {
   return (
     <div id={"Home"} className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -58,5 +58,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;

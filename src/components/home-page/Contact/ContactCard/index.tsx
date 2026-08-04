@@ -1,14 +1,12 @@
-import React from "react";
 import styles from "./style.module.scss";
-interface ContactCardProps {
+export const ContactCard = ({
+  title,
+  text,
+  url,
+}: {
   title: string;
   text: string;
   url?: string;
-}
-const ContactCard: React.FC<ContactCardProps> = ({
-  title,
-  text,
-  url = null,
 }) => {
   return (
     <div className={styles.container}>
@@ -25,5 +23,3 @@ const ContactCard: React.FC<ContactCardProps> = ({
     </div>
   );
 };
-
-export default ContactCard;

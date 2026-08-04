@@ -1,8 +1,8 @@
 import styles from "./style.module.scss";
 
-import SkillCard from "./SkillCard";
+import { SkillCard } from "./SkillCard";
 
-const Skill = () => {
+export const Skill = () => {
   return (
     <div id={"Skill"} className={styles.container}>
       <div className={styles.container_bg_primaryHeader}></div>
@@ -42,5 +42,3 @@ const Skill = () => {
     </div>
   );
 };
-
-export default Skill;
