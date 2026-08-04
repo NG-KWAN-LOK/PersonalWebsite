@@ -136,17 +136,6 @@
     font-size: 3rem;
   }
 }
-.iconSection_container_subTitle {
-  font-size: 2rem;
-  color: var(--primary-text-color);
-  padding-top: 10px;
-  @media (max-width: $breakpoint-lg) {
-    font-size: 1.6rem;
-  }
-  @media (max-width: $breakpoint-sm) {
-    font-size: 1.4rem;
-  }
-}
 .infoSection_container_footer {
   width: 100%;
   @media (min-width: $breakpoint-md) {

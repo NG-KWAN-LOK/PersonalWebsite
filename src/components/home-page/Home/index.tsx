@@ -1,6 +1,7 @@
 import styles from "./style.module.scss";
 import avatar from "../../../image/icon.jpg";
 
+import { CodeIntro } from "./CodeIntro";
 import { ContactCard } from "./ContactCard";
 export const Home = () => {
   return (
@@ -26,9 +27,7 @@ export const Home = () => {
                 <span>KWAN LOK, NG</span>
                 <span>吳軍樂</span>
               </div>
-              <div className={styles.iconSection_container_subTitle}>
-                Achieve to become a Front-end Developer
-              </div>
+              <CodeIntro />
             </div>
             <div className={styles.infoSection_container_footer}>
               <hr className={styles.infoSection_container_footer_line} />
