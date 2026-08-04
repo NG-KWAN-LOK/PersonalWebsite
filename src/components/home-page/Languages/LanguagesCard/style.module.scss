@@ -5,22 +5,12 @@
   line-height: 1.5;
   padding: 0 2.45rem 0 0;
   margin: 0 0 20px 0;
-  @media (max-width: 600px) {
-    width: calc(99.999999% * 0.51);
+  @media (max-width: $breakpoint-sm) {
     width: 100%;
   }
-  @media (min-width: 760px) {
+  @media (min-width: $breakpoint-sm) {
     padding: 0 3.5rem 0 0;
   }
-}
-.container_item_title {
-  small {
-    color: var(--second-title-color);
-  }
-}
-.container_item_title_persentage {
-  color: var(--second-title-color);
-  font-weight: 600;
 }
 .container_item_title_text {
   color: var(--primary-title-color);

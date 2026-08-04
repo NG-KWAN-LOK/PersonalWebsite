@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   justify-content: center;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     height: 100vh;
   }
 }
@@ -16,7 +16,7 @@
   z-index: -1;
   left: 0;
   background-color: var(--primary-black-color);
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -27,36 +27,14 @@
   z-index: -1;
   right: 0;
   background-color: var(--primary-bg-color);
-  @media (max-width: 1024px) {
-    display: none;
-  }
-}
-.container_bg_secondHeader {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
-  left: 0;
-  background-color: var(--second-black-color);
-  @media (max-width: 1024px) {
-    display: none;
-  }
-}
-.container_bg_secondContent {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
-  right: 0;
-  background-color: var(--second-bg-color);
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
 .container_contain {
   width: 100%;
   background-color: var(--primary-bg-color);
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     display: flex;
     width: 1276px;
   }
@@ -64,14 +42,14 @@
 .iconSection {
   display: flex;
   padding: 6.75rem 2.45rem 0rem;
-  @media (min-width: 760px) {
+  @media (min-width: $breakpoint-sm) {
     padding: 3.15rem 3.5rem 1.4rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     background: var(--primary-black-color);
     width: 30%;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: $breakpoint-lg) {
     padding: 4.375rem 5.25rem 1.6625rem;
   }
   justify-content: flex-end;
@@ -83,36 +61,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     width: 100%;
   }
-}
-.iconSection_container_avatar {
 }
 .iconSection_container_avatar_img {
   border-radius: 50%;
   width: 15rem;
-  @media (min-width: 760px) {
+  @media (min-width: $breakpoint-sm) {
     width: 19rem;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: $breakpoint-md) {
     width: 25rem;
   }
 }
 .infoSection {
   width: 100%;
-  padding: 1.75rem 2.45rem 0rem;
-  @media (min-width: 760px) {
-    padding: 3.15rem 3.5rem 1.4rem;
-  }
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     width: 70%;
+    padding: 3.15rem 3.5rem;
+  }
+  @media (max-width: $breakpoint-md) {
+    padding: 3.15rem 3.5rem 1.4rem;
   }
 }
 .infoSection_container {
   height: 100%;
   align-items: center;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     display: flex;
     position: relative;
   }
@@ -121,8 +97,7 @@
   width: 100%;
   text-align: center;
   margin: 0 0 35px 0;
-  padding: 0 1.75rem 0;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     text-align: left;
     margin: 0;
     padding: 0;
@@ -132,10 +107,10 @@
   font-size: 5rem;
   font-weight: 100;
   color: var(--primary-text-color);
-  @media (max-width: 1200px) {
+  @media (max-width: $breakpoint-lg) {
     font-size: 4rem;
   }
-  @media (max-width: 760px) {
+  @media (max-width: $breakpoint-sm) {
     font-size: 3rem;
   }
 }
@@ -143,15 +118,21 @@
   font-size: 5rem;
   font-weight: 600;
   color: var(--second-title-color);
-  @media (max-width: 1200px) {
+  span + span {
+    margin-left: 0.25em;
+  }
+  @media (max-width: $breakpoint-lg) {
     font-size: 4rem;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     display: grid;
     justify-content: center;
     align-items: center;
+    span + span {
+      margin-left: 0;
+    }
   }
-  @media (max-width: 760px) {
+  @media (max-width: $breakpoint-sm) {
     font-size: 3rem;
   }
 }
@@ -159,16 +140,16 @@
   font-size: 2rem;
   color: var(--primary-text-color);
   padding-top: 10px;
-  @media (max-width: 1200px) {
+  @media (max-width: $breakpoint-lg) {
     font-size: 1.6rem;
   }
-  @media (max-width: 760px) {
+  @media (max-width: $breakpoint-sm) {
     font-size: 1.4rem;
   }
 }
 .infoSection_container_footer {
   width: 100%;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     position: absolute;
     bottom: 0;
     left: 0;

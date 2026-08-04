@@ -1,20 +1,17 @@
 @import "../../../../theme";
-.container {
-  height: 100%;
-}
 .navContainer {
   height: 100%;
   display: flex;
 }
 .navBar {
   width: 25rem;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: $breakpoint-md) {
     display: flex;
     position: fixed;
     width: 100%;
     z-index: 1;
   }
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: $breakpoint-md) {
     z-index: 1;
     background-color: var(--primary-bg-color);
     left: 0%;
@@ -26,7 +23,7 @@
   transition: 0.3s;
 }
 .navBar-close {
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: $breakpoint-md) {
     left: -100%;
     transition: 0.3s;
   }
@@ -81,7 +78,7 @@
     rgba(0, 0, 0, 0.05) 35%,
     rgba(0, 0, 0, 0.24) 100%
   );
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: $breakpoint-md) {
     display: none;
   }
 }

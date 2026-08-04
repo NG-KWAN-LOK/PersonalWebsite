@@ -6,7 +6,7 @@
   justify-content: center;
   position: fixed;
   z-index: 2;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     height: 9rem;
     background-color: var(--primary-bg-color);
   }
@@ -24,21 +24,15 @@
 .header {
   width: 50%;
   display: flex;
-  @media only screen and (min-width: 600px) {
-  }
-  @media only screen and (min-width: 768px) {
-  }
-  @media only screen and (max-width: 1025px) {
+  @media only screen and (max-width: $breakpoint-md) {
     display: none;
-  }
-  @media only screen and (min-width: 1200px) {
   }
 }
 .phoneHerder {
   width: 100%;
   height: 6rem;
   display: flex;
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: $breakpoint-md) {
     display: none;
   }
 }

@@ -7,31 +7,9 @@
 }
 .container_contain {
   width: 100%;
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     display: flex;
     width: 1276px;
-  }
-}
-.container_bg_primaryHeader {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
-  left: 0;
-  background-color: var(--primary-black-color);
-  @media (max-width: 1024px) {
-    display: none;
-  }
-}
-.container_bg_primaryContent {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  z-index: -1;
-  right: 0;
-  background-color: var(--primary-bg-color);
-  @media (max-width: 1024px) {
-    display: none;
   }
 }
 .container_bg_secondHeader {
@@ -41,7 +19,7 @@
   z-index: -1;
   left: 0;
   background-color: var(--second-black-color);
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -52,7 +30,7 @@
   z-index: -1;
   right: 0;
   background-color: var(--second-bg-color);
-  @media (max-width: 1024px) {
+  @media (max-width: $breakpoint-md) {
     display: none;
   }
 }
@@ -60,14 +38,14 @@
   display: flex;
   background: var(--primary-black-color);
   padding: 2.45rem 2.45rem 2.45rem;
-  @media (min-width: 760px) {
+  @media (min-width: $breakpoint-sm) {
     padding: 3.15rem 3.5rem 3.15rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     background: var(--second-black-color);
     width: 30%;
   }
-  @media (min-width: 1200px) {
+  @media (min-width: $breakpoint-lg) {
     padding: 4.375rem 5.25rem 1.6625rem;
   }
 }
@@ -75,8 +53,7 @@
   height: 100%;
   width: 100%;
   text-align: right;
-  @media (max-width: 1024px) {
-    width: 100%;
+  @media (max-width: $breakpoint-md) {
     text-align: left;
   }
 }
@@ -94,10 +71,10 @@
   width: 100%;
   background-color: var(--primary-bg-color);
   padding: 2.45rem 0 2.45rem 2.45rem;
-  @media (min-width: 760px) {
+  @media (min-width: $breakpoint-sm) {
     padding: 3.15rem 0 3.15rem 3.5rem;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     width: 70%;
     background-color: var(--second-bg-color);
   }
@@ -106,13 +83,11 @@
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  @media (min-width: 760px) {
-  }
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-md) {
     position: relative;
     flex: 0 50%;
   }
-  @media (min-width: 600px) {
+  @media (min-width: $breakpoint-sm) {
     :nth-last-child(-n + 2) {
       margin-bottom: 0;
     }
