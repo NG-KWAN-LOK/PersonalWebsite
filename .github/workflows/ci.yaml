@@ -1,35 +1,56 @@
-name: Deploy to GAE
+name: CI
+
 on:
   push:
     branches: [master]
   pull_request:
 
 jobs:
-  deploy:
-    name: Deploying to Google Cloud
+  build:
+    name: Build Check
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set Up Node.js Environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: "21"
-
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: NPM Install
-        run: npm install && npm run build
+      - name: Set Up pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: App Engine auth
-        uses: "google-github-actions/auth@v1"
+      - name: Set Up Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install and Build
+        run: pnpm install --frozen-lockfile && pnpm build
+
+  deploy:
+    name: Deploy to Cloud Run
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Google Cloud auth
+        uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      - name: Deploy to App Engine
-        id: deploy
-        uses: google-github-actions/deploy-appengine@v1
+      - name: Set up gcloud CLI
+        uses: google-github-actions/setup-gcloud@v2
+
+      # WARNING: these flags must match the Makefile's deploy target exactly,
+      #          otherwise manual and CI deploys will overwrite each other's configuration.
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2
         with:
-          deliverables: app.yaml
-          version: v1
+          service: personal-website
+          region: asia-east1
+          source: .
           project_id: ${{ secrets.GCP_PROJECT }}
+          flags: --allow-unauthenticated --cpu=1 --memory=128Mi --min-instances=0 --max-instances=2 --concurrency=80
