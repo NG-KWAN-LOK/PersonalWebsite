@@ -6,9 +6,12 @@ on:
   pull_request:
 
 jobs:
-  build:
-    name: Build Check
+  deploy:
+    name: Build and Deploy
     runs-on: ubuntu-latest
+    env:
+      DEPLOY: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+      IMAGE: us-west1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/cloud-run-source-deploy/personal-website
 
     steps:
       - name: Checkout
@@ -26,31 +29,31 @@ jobs:
       - name: Install and Build
         run: pnpm install --frozen-lockfile && pnpm build
 
-  deploy:
-    name: Deploy to Cloud Run
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
       - name: Google Cloud auth
+        if: env.DEPLOY == 'true'
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS }}
 
-      - name: Set up gcloud CLI
+      - name: Set up gcloud CLI # the docker credential helper needs it
+        if: env.DEPLOY == 'true'
         uses: google-github-actions/setup-gcloud@v2
+
+      - name: Build and push the image
+        if: env.DEPLOY == 'true'
+        run: |
+          gcloud auth configure-docker us-west1-docker.pkg.dev --quiet
+          docker build --tag "$IMAGE:${{ github.sha }}" --tag "$IMAGE:latest" .
+          docker push --all-tags "$IMAGE"
 
       # WARNING: these flags must match the Makefile's deploy target exactly,
       #          otherwise manual and CI deploys will overwrite each other's configuration.
       - name: Deploy to Cloud Run
+        if: env.DEPLOY == 'true'
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: personal-website
           region: us-west1
-          source: .
+          image: ${{ env.IMAGE }}:${{ github.sha }}
           project_id: ${{ secrets.GCP_PROJECT }}
           flags: --allow-unauthenticated --cpu=1 --memory=128Mi --min-instances=0 --max-instances=1 --concurrency=80

@@ -1,5 +1,3 @@
-node_modules
-build
-.git
-.github
-.env*
+*
+!nginx.conf
+!build

@@ -3,6 +3,16 @@
 
 ### https://www.sawajiri-ng.net/
 
+## Deployment
+
+Cloud Run service `personal-website` (project `personal-website-360719`, region `us-west1`).
+
+- Push to `master` → GitHub Actions builds the app, builds and pushes the Docker image to
+  Artifact Registry, and deploys it (`.github/workflows/ci.yaml`). PRs only run the build check.
+- Manual deploy: `make deploy` (its flags must stay in sync with the workflow).
+
+See `MIGRATION.md` for the full setup and rationale.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
