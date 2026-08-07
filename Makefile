@@ -10,4 +10,4 @@ deploy:
 		--region=$(REGION) --project=$(PROJECT) \
 		--allow-unauthenticated \
 		--cpu=1 --memory=128Mi \
-		--min-instances=0 --max-instances=2 --concurrency=80
+		--min-instances=0 --max-instances=1 --concurrency=80

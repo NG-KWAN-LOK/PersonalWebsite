@@ -53,4 +53,4 @@ jobs:
           region: asia-east1
           source: .
           project_id: ${{ secrets.GCP_PROJECT }}
-          flags: --allow-unauthenticated --cpu=1 --memory=128Mi --min-instances=0 --max-instances=2 --concurrency=80
+          flags: --allow-unauthenticated --cpu=1 --memory=128Mi --min-instances=0 --max-instances=1 --concurrency=80
