@@ -50,7 +50,7 @@ jobs:
         uses: google-github-actions/deploy-cloudrun@v2
         with:
           service: personal-website
-          region: asia-east1
+          region: us-west1
           source: .
           project_id: ${{ secrets.GCP_PROJECT }}
           flags: --allow-unauthenticated --cpu=1 --memory=128Mi --min-instances=0 --max-instances=1 --concurrency=80

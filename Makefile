@@ -1,6 +1,6 @@
 PROJECT := personal-website-360719
 SERVICE := personal-website
-REGION  := asia-east1
+REGION  := us-west1
 
 # WARNING: these flags must match the deploy flags in .github/workflows/ci.yaml exactly,
 #          otherwise manual and CI deploys will overwrite each other's configuration.
